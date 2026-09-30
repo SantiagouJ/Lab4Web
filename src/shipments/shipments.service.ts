@@ -28,7 +28,7 @@ export class ShipmentsService {
     return shipment;
   }
 
-  async create(data: CreateShipmentDto): Promise<ShipmentEntity> {
+  create(data: CreateShipmentDto): Promise<ShipmentEntity> {
     const shipment = this.shipmentsRepository.create({
       ...data,
       status: ShipmentStatus.CREATED,
